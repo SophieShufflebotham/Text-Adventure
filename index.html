@@ -1,0 +1,88 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+	<script src="Adventure.js"></script>
+	
+</head>
+  <body>
+  <div id="body-container" class="body-container">
+  <div id="victory-title">
+  	<h1 id="victory-title-text">You Win! </h1>
+  </div>
+  
+  <div id="game-victory" class="hidden"> </div>
+  <div id="screen-container" class="game-display">
+    <form id="input-form" autocomplete="off" method="post">
+      <h1> Text Adventure!</h1>
+      <div id="game-over">
+        <h1 id="game-over-title"> Game Over!</h1>
+        <h2 id="game-over-text">Your health hit 0</h2>
+   </div>
+      
+    <div id="game-overlay">
+      
+		
+      	<audio id="victory-audio" preload="auto">
+      	<source src="./assets/victory.mp3" type="audio/mp3">
+      	</audio>
+      	
+      	<audio id="game-over-audio" preload="auto">
+      	<source src="./assets/game-over.mp3" type="audio/mp3">
+      	</audio>
+      	
+      	<audio id="item-get-audio" preload="auto">
+      	<source src="./assets/item-get.mp3" type="audio/mp3">
+      	</audio>
+      	
+      	 <audio id="battle-audio" preload="auto">
+      	<source src="./assets/battle.mp3" type="audio/mp3">
+      	</audio>
+      	
+      	<audio id="party-get-audio" preload="auto">
+      	<source src="./assets/party-get.mp3" type="audio/mp3">
+      	</audio>
+      	
+      	<img id="art-display" src=""/>
+        <p id="intro-text">To begin, please enter your name:</p>
+        <pre id="current-room">Placeholder Text</pre>
+        <pre id="current-battle">Placeholder Text 2</pre>
+        <label for="cmd-box" style="color:#696969">Command: </label>
+        <input type="text" id="cmd-box" name="cmd-box" class="display-box">
+       
+        
+        <div id="inventory-container">
+          <textarea id="inventory-display" class="display-box"readonly></textarea>
+        </div>
+      
+        <div id="party-container">
+          <textarea id="party-display" class="display-box"readonly></textarea>
+        </div>       
+      </div>
+      
+        <div id="help-display" class="help">
+          <p>
+          <u>Commands</u>
+          </p>
+          <p id="help-text" class="movement-commands">
+            <u>Movement</u>
+            <br/><b>N</b>orth
+            <br/><b>S</b>outh
+            <br/><b>E</b>ast
+            <br/><b>W</b>est
+            <br/><b>I</b>nteract
+            <br/><br/><u>Battle</u>
+            <br/><b>A</b>ttack
+            <br/><b>D</b>efend
+            <br/><b>H</b>eal
+            <br/><b>F</b>lee
+          </p>
+        </div>
+        
+    </form>
+  	</div>
+  </div>
+  </body>
+
+</html>
